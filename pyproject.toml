@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "workshop-pytest"
+version = "0.1.0"
+description = ""
+authors = ["goncamateus <mateus.gm@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^2.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+ipython = "^8.27.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

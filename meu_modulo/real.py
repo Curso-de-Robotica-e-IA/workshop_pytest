@@ -1,7 +1,0 @@
-# Soma
-
-# Subtracao
-
-# Multiplicacao
-
-# Divisao
