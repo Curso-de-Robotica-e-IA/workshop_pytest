@@ -26,12 +26,12 @@ class Position3D:
             raise ValueError("Comparing Position3D with non-Position3D object")
         return np.all(self.__np_repr == other.__np_repr)
 
-    def __add__(self, other: object) -> "Position3D":
+    def __add__(self, other: object):
         if not isinstance(other, Position3D):
             raise ValueError("Adding Position3D with non-Position3D object")
         return Position3D(self.x + other.x, self.y + other.y, self.z + other.z)
 
-    def __sub__(self, other: object) -> "Position3D":
+    def __sub__(self, other: object):
         if not isinstance(other, Position3D):
             raise ValueError("Subtracting Position3D with non-Position3D object")
         return Position3D(self.x - other.x, self.y - other.y, self.z - other.z)
@@ -48,7 +48,7 @@ class Position3D:
     def z(self) -> float:
         return self.__z
 
-    def rotate(self, angle: float, axis: int = 0, inplace=True) -> "Position3D" | None:
+    def rotate(self, angle: float, axis: int = 0, inplace=True):
         assert axis in [0, 1, 2], "Axis must be 0, 1 or 2"
         rotation_matrixes = {
             0: np.array(

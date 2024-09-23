@@ -16,3 +16,4 @@ class PickAndPlaceRobot:
     def place(self, position: Position3D):
         self.arm.move_to(position)
         self.arm.move_relative(Position3D(0, 0, -0.1))
+        self.gripper.open()
